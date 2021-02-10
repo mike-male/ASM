@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+struct C{
+    int x;            //struct defaults to public
+    int f();
+};
+
+int C::f(){
+    return x;
+    }
+
+
+int main(){
+C c;
+c.x = 5;            //legal bc x is public
+cout << c.f();
+return 0;
+}
